@@ -1,0 +1,18 @@
+
+
+services:
+  api:
+    build:
+      context: .
+      args:
+        INSTALL_YOLO: ${INSTALL_YOLO:-false}
+    ports:
+      - "8000:8000"
+    environment:
+      DB_PATH: /app/data/store_intelligence.db
+      STORE_LAYOUT_PATH: /app/data/store_layout.json
+      POS_PATH: /app/data/pos_transactions_canonical.csv
+      LOG_LEVEL: INFO
+    volumes:
+      - ./data:/app/data
+      - ./outputs:/app/outputs

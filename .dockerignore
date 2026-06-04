@@ -1,0 +1,16 @@
+.git
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+*.db
+*.log
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.zip
+yolov8*.pt
+data/Store*/
+outputs/*.db
